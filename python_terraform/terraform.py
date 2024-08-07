@@ -152,6 +152,7 @@ class Terraform:
         :return: ret_code, stdout, stderr
         """
         default = kwargs.copy()
+        """Updated to handle TF upgrades"""
         default["auto_approve"] = True
         options = self._generate_default_options(default)
         args = self._generate_default_args(dir_or_plan)
